@@ -157,6 +157,25 @@ const AdminSchema = new mongoose.Schema({
 
 ---
 
+🖼️ Screenshots Gallery
+A glimpse into Apna Adda’s user experience — from login to listings!
+
+![image](https://github.com/user-attachments/assets/c34fa41b-ae45-43b9-9f09-ffd56905eb50)
+
+![image](https://github.com/user-attachments/assets/5c303b92-6d1d-4720-ac99-854304828539)
+
+![image](https://github.com/user-attachments/assets/63c12c65-6173-475d-a412-4c6af496086c)
+
+![image](https://github.com/user-attachments/assets/a2beae77-4bc7-4eee-b1e8-bfb29ff91cc6)
+
+![image](https://github.com/user-attachments/assets/5c3378e1-6453-4e94-a1c1-a43d74c286d0)
+
+![image](https://github.com/user-attachments/assets/94745f3e-3751-4f3e-a8bd-3a44f75bd710)
+
+![image](https://github.com/user-attachments/assets/ad7edc76-7174-4155-b0c8-5c200cb79e7b)
+
+![image](https://github.com/user-attachments/assets/8209eec6-99b6-41d0-9705-5150812d8d66)
+
 ## 🔐 Security & Uploads
 
 - Passwords securely hashed with **bcrypt**
