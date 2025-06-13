@@ -1,6 +1,6 @@
 # 🏡 Apna Adda — Your Place, Your People
 
-A full-stack real-estate platform built with **Node.js**, **Express**, and **MongoDB**, empowering users, tenants, and admins to manage listings, documents, and accounts—designed with Indian-inspired warmth.
+A full-stack house rent/buy listing platform built with **Node.js**, **Express**, and **MongoDB**, empowering users, tenants, and admins to manage listings, documents, and accounts—designed with Indian-inspired warmth.
 
 ---
 
