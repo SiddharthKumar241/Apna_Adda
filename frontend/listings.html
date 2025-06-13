@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dream Homes</title>
+  <link rel="stylesheet" href="listings.css" />
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Find Your Dream Home</h1>
+      <p>Browse premium listings handpicked for comfort, style, and value.</p>
+      <form id="searchForm" class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search by city or title..." />
+        <button type="submit">Search</button>
+      </form>
+    </div>
+  </section>
+
+  <div id="floatingFilters" class="floating-filters">
+    <h3>Filter Listings</h3>
+    <label for="filterCity">City</label>
+    <input type="text" id="filterCity" placeholder="Enter city" />
+
+    <label for="filterPrice">Price Range</label>
+    <input type="range" id="filterPrice" min="10000" max="100000" step="5000" value="50000" />
+    <span id="priceValue">₹50000</span>
+
+    <label for="filterType">Property Type</label>
+    <select id="filterType">
+      <option value="any">Any</option>
+      <option value="apartment">Apartment</option>
+      <option value="house">House</option>
+      <option value="villa">Villa</option>
+    </select>
+
+    <button id="applyFilters">Apply Filters</button>
+  </div>
+
+  <!-- Listings Section -->
+  <section id="listingContainer" class="listings-grid"></section>
+  <div id="back">
+    <button id="back1" onclick="window.location.href='Homepage.html'">Homepage</button>
+  </div>
+
+  <script src="listings.js"></script>
+</body>
+</html>

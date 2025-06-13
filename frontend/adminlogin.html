@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Login</title>
+  <style>
+    body, html {
+      margin: 0; padding: 0;
+      background-color: #98c79c;
+      font-family: "Segoe UI", sans-serif;
+      height: 100%;
+    }
+    .outer-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .card {
+      background-color: #fdfaf4;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      display: flex;
+      padding: 2rem;
+      width: 900px;
+      max-width: 95%;
+    }
+    .form-section {
+      background-color: #fff;
+      border-radius: 16px;
+      padding: 2rem;
+      width: 370px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .form-section h2 {
+      font-size: 24px;
+      margin-bottom: 0.5rem;
+    }
+    .form-section p {
+      font-size: 14px;
+      color: #444;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+    input {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+    .sign-in-btn {
+      width: 100%;
+      padding: 0.75rem;
+      background-color: #aed6b3;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 14px;
+      cursor: pointer;
+      margin-bottom: 1.2rem;
+      transition: background-color 0.3s ease;
+    }
+    .sign-in-btn:hover {
+      background-color: #8cbf8a;
+    }
+    .bottom-text {
+      font-size: 13px;
+      color: #444;
+      text-align: center;
+    }
+    .bottom-text a {
+      font-weight: bold;
+      text-decoration: none;
+      color: #000;
+    }
+    .image-section {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-left: 20px;
+    }
+    .image-section img {
+      max-width: 90%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="outer-wrapper">
+    <div class="card">
+      <div class="form-section">
+        <h2>Admin Sign In</h2>
+        <p>Please enter your admin credentials</p>
+        <!-- Note the action matches server POST /admin/login-admin -->
+        <form action="/admin/login-admin" method="POST">
+          <input type="email" name="email" placeholder="Admin Email" required />
+          <input type="password" name="password" placeholder="Password" required />
+          <button class="sign-in-btn" type="submit">Sign In</button>
+        </form>
+        <p class="bottom-text">Don't have an admin account? <a href="adminregister.html">Register Now</a></p>
+      </div>
+      <div class="image-section">
+        <img src="./image.png" alt="Admin Login Illustration" />
+      </div>
+    </div>
+  </div>
+</body>
+</html>

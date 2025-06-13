@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Submit Tenant Details</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      background-color: #98c79c;
+      font-family: "Segoe UI", sans-serif;
+      height: 100%;
+    }
+
+    .outer-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background-color: #fdfaf4;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      display: flex;
+      padding: 2rem;
+      width: 950px;
+      max-width: 95%;
+    }
+
+    .form-section {
+      background-color: #ffffff;
+      border-radius: 16px;
+      padding: 2rem;
+      width: 370px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .form-section h2 {
+      font-size: 22px;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    .sign-in-btn {
+      width: 100%;
+      padding: 0.75rem;
+      background-color: #aed6b3;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 14px;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+
+    .image-section {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .image-section img {
+      max-width: 90%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="outer-wrapper">
+    <div class="card">
+      
+      <!-- Left: Submit Details Form -->
+      <div class="form-section">
+        <h2>Submit Tenant Details</h2>
+        <form action="/submit-details" method="post" enctype="multipart/form-data">
+          <input type="text" name="tenantName" placeholder="Tenant Full Name" required />
+          <input type="number" name="age" placeholder="Age" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <input type="tel" name="phone" placeholder="Phone Number" required />
+          <input type="number" name="numPeople" placeholder="Number of People as Tenants" required />
+          <input type="text" name="propertySelected" placeholder="Property Selected" required />
+          <input type="number" name="listedAmount" placeholder="Amount Listed (₹)" required />
+          <input type="number" name="readyToPay" placeholder="Amount Ready to Pay (₹)" required />
+          <input type="text" name="leaseTime" placeholder="Lease Agreement Time (e.g., 6 months)" required />
+          <input type="text" name="aadhaar" placeholder="Aadhaar Number" required />
+          <label style="font-size: 14px; align-self: flex-start;">Upload Photo:</label>
+          <input type="file" name="photo" accept="image/*" required />
+          <button class="sign-in-btn">Finalize</button>
+        </form>
+      </div>
+
+      <!-- Right: Illustration -->
+      <div class="image-section">
+        <img src="./image.png" alt="Illustration" />
+      </div>
+    </div>
+  </div>
+</body>
+</html>

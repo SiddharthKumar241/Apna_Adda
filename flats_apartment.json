@@ -1,0 +1,92 @@
+[
+  {
+    "city": "Delhi",
+    "title": "2BHK Apartment in Central Delhi",
+    "type": "Flats_Apartments",
+    "rent": 18000,
+    "dateAdded": "2025-05-12",
+    "area": "900 sq.ft",
+    "image": "/assets/flats1.jpg"
+  },
+  {
+    "city": "Mumbai",
+    "title": "Luxury 3BHK Apartment",
+    "type": "Flats_Apartments",
+    "rent": 30000,
+    "dateAdded": "2025-04-28",
+    "area": "1400 sq.ft",
+    "image": "/assets/flats2.jpg"
+  },
+  {
+    "city": "Bangalore",
+    "title": "1BHK Cozy Apartment",
+    "type": "Flats_Apartments",
+    "rent": 12000,
+    "dateAdded": "2025-03-22",
+    "area": "600 sq.ft",
+    "image": "/assets/flats3.jpg"
+  },
+  {
+    "city": "Chennai",
+    "title": "3BHK Apartment with Balcony",
+    "type": "Flats_Apartments",
+    "rent": 22000,
+    "dateAdded": "2025-02-15",
+    "area": "1100 sq.ft",
+    "image": "/assets/flats4.jpg"
+  },
+  {
+    "city": "Hyderabad",
+    "title": "2BHK Apartment Near IT Park",
+    "type": "Flats_Apartments",
+    "rent": 19000,
+    "dateAdded": "2025-01-20",
+    "area": "900 sq.ft",
+    "image": "/assets/flats5.jpg"
+  },
+  {
+    "city": "Pune",
+    "title": "Spacious 3BHK Apartment",
+    "type": "Flats_Apartments",
+    "rent": 21000,
+    "dateAdded": "2025-04-10",
+    "area": "1200 sq.ft",
+    "image": "/assets/flats6.jpg"
+  },
+  {
+    "city": "Ahmedabad",
+    "title": "Affordable 2BHK Apartment",
+    "type": "Flats_Apartments",
+    "rent": 15000,
+    "dateAdded": "2025-03-08",
+    "area": "850 sq.ft",
+    "image": "/assets/flats7.jpg"
+  },
+  {
+    "city": "Kolkata",
+    "title": "2BHK Apartment near Park",
+    "type": "Flats_Apartments",
+    "rent": 17000,
+    "dateAdded": "2025-05-07",
+    "area": "900 sq.ft",
+    "image": "/assets/flats8.jpg"
+  },
+  {
+    "city": "Lucknow",
+    "title": "1BHK Apartment for Singles",
+    "type": "Flats_Apartments",
+    "rent": 11000,
+    "dateAdded": "2025-02-28",
+    "area": "550 sq.ft",
+    "image": "/assets/flats9.jpg"
+  },
+  {
+    "city": "Chandigarh",
+    "title": "3BHK Apartment with Gym Access",
+    "type": "Flats_Apartments",
+    "rent": 23000,
+    "dateAdded": "2025-04-20",
+    "area": "1150 sq.ft",
+    "image": "/assets/flats10.jpg"
+  }
+]

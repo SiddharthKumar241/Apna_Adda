@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Register</title>
+  <style>
+    body, html {
+      margin: 0; padding: 0;
+      background-color: #98c79c;
+      font-family: "Segoe UI", sans-serif;
+      height: 100%;
+    }
+    .outer-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 1rem;
+      box-sizing: border-box;
+    }
+    .card {
+      background-color: #fdfaf4;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      display: flex;
+      padding: 2rem;
+      width: 900px;
+      max-width: 95%;
+      box-sizing: border-box;
+    }
+    .form-section {
+      background-color: #fff;
+      border-radius: 16px;
+      padding: 2rem;
+      width: 370px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .form-section h2 {
+      font-size: 24px;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+    .form-section p {
+      font-size: 14px;
+      color: #444;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+    input, 
+    input[type="file"] {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+    label[for="ownershipPaper"] {
+      align-self: flex-start;
+      margin-bottom: 0.3rem;
+      font-size: 13px;
+      color: #555;
+      font-weight: 600;
+    }
+    .register-btn {
+      width: 100%;
+      padding: 0.75rem;
+      background-color: #aed6b3;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 14px;
+      cursor: pointer;
+      margin-bottom: 1.2rem;
+      transition: background-color 0.3s ease;
+    }
+    .register-btn:hover {
+      background-color: #8cbf8a;
+    }
+    .bottom-text {
+      font-size: 13px;
+      color: #444;
+      text-align: center;
+    }
+    .bottom-text a {
+      font-weight: bold;
+      text-decoration: none;
+      color: #000;
+    }
+    .bottom-text a:hover {
+      text-decoration: underline;
+    }
+    .image-section {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-left: 20px;
+    }
+    .image-section img {
+      max-width: 90%;
+      height: auto;
+      border-radius: 12px;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="outer-wrapper">
+    <div class="card">
+      <div class="form-section">
+        <h2>Admin Register</h2>
+        <p>Create your admin account</p>
+        <form action="/admin/register" method="POST" enctype="multipart/form-data">
+          <input type="text" name="name" placeholder="Full Name" required />
+          <input type="email" name="email" placeholder="Email Address" required />
+          <input type="password" name="password" placeholder="Password" required />
+          <input type="password" name="confirmPassword" placeholder="Confirm Password" required />
+          <input 
+            type="text" 
+            name="aadhaar" 
+            placeholder="Aadhaar Number (12 digits)" 
+            pattern="\d{12}" 
+            title="Enter 12 digit Aadhaar number" 
+            required 
+          />
+          <label for="ownershipPaper">Upload House Ownership Paper</label>
+          <input 
+            type="file" 
+            id="ownershipPaper" 
+            name="ownershipPaper" 
+            accept=".pdf,.jpg,.jpeg,.png" 
+            required 
+          />
+          <button class="register-btn" type="submit">Register</button>
+        </form>
+        <p class="bottom-text">Already have an account? <a href="adminlogin.html">Sign In</a></p>
+      </div>
+      <div class="image-section">
+        <img src="./image.png" alt="Admin Register Illustration" />
+      </div>
+    </div>
+  </div>
+</body>
+</html>

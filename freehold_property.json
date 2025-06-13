@@ -1,0 +1,92 @@
+[
+  {
+    "city": "Delhi",
+    "title": "Prime Authority Plot near Metro",
+    "type": "Authority_Plots",
+    "rent": 2500000,
+    "dateAdded": "2025-05-01",
+    "area": "500 sq.ft",
+    "image": "/assets/authority1.jpg"
+  },
+  {
+    "city": "Mumbai",
+    "title": "Government Approved Plot in Mumbai",
+    "type": "Authority_Plots",
+    "rent": 4500000,
+    "dateAdded": "2025-04-20",
+    "area": "700 sq.ft",
+    "image": "/assets/authority2.jpg"
+  },
+  {
+    "city": "Bangalore",
+    "title": "Authority Plot near IT Hub",
+    "type": "Authority_Plots",
+    "rent": 3200000,
+    "dateAdded": "2025-03-15",
+    "area": "600 sq.ft",
+    "image": "/assets/authority3.jpg"
+  },
+  {
+    "city": "Chennai",
+    "title": "Authority Plot in Residential Area",
+    "type": "Authority_Plots",
+    "rent": 2800000,
+    "dateAdded": "2025-01-10",
+    "area": "550 sq.ft",
+    "image": "/assets/authority4.jpg"
+  },
+  {
+    "city": "Hyderabad",
+    "title": "Secure Authority Plot in Hyderabad",
+    "type": "Authority_Plots",
+    "rent": 3000000,
+    "dateAdded": "2025-02-18",
+    "area": "650 sq.ft",
+    "image": "/assets/authority5.jpg"
+  },
+  {
+    "city": "Pune",
+    "title": "Prime Location Authority Plot",
+    "type": "Authority_Plots",
+    "rent": 2700000,
+    "dateAdded": "2025-04-05",
+    "area": "520 sq.ft",
+    "image": "/assets/authority6.jpg"
+  },
+  {
+    "city": "Ahmedabad",
+    "title": "Authority Plot near Highway",
+    "type": "Authority_Plots",
+    "rent": 2400000,
+    "dateAdded": "2025-03-25",
+    "area": "530 sq.ft",
+    "image": "/assets/authority7.jpg"
+  },
+  {
+    "city": "Kolkata",
+    "title": "Government Approved Authority Plot",
+    "type": "Authority_Plots",
+    "rent": 2600000,
+    "dateAdded": "2025-05-05",
+    "area": "580 sq.ft",
+    "image": "assets/authority.jpeg"
+  },
+  {
+    "city": "Lucknow",
+    "title": "Authority Plot with Good Connectivity",
+    "type": "Authority_Plots",
+    "rent": 2300000,
+    "dateAdded": "2025-02-28",
+    "area": "510 sq.ft",
+    "image": "/assets/authority9.jpg"
+  },
+  {
+    "city": "Chandigarh",
+    "title": "Well Planned Authority Plot",
+    "type": "Authority_Plots",
+    "rent": 3100000,
+    "dateAdded": "2025-04-15",
+    "area": "600 sq.ft",
+    "image": "/assets/authority10.jpg"
+  }
+]

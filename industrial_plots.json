@@ -1,0 +1,92 @@
+[
+  {
+    "city": "Delhi",
+    "title": "Industrial Plot Near Highway",
+    "type": "Industrial_Plots",
+    "rent": 3500000,
+    "dateAdded": "2025-05-05",
+    "area": "1500 sq.ft",
+    "image": "/assets/industrial1.jpg"
+  },
+  {
+    "city": "Mumbai",
+    "title": "Industrial Plot with Warehouse",
+    "type": "Industrial_Plots",
+    "rent": 4800000,
+    "dateAdded": "2025-04-22",
+    "area": "1800 sq.ft",
+    "image": "/assets/industrial2.jpg"
+  },
+  {
+    "city": "Bangalore",
+    "title": "Industrial Plot in Tech Park",
+    "type": "Industrial_Plots",
+    "rent": 4200000,
+    "dateAdded": "2025-03-30",
+    "area": "1600 sq.ft",
+    "image": "/assets/industrial3.jpg"
+  },
+  {
+    "city": "Chennai",
+    "title": "Spacious Industrial Plot",
+    "type": "Industrial_Plots",
+    "rent": 3800000,
+    "dateAdded": "2025-02-14",
+    "area": "1550 sq.ft",
+    "image": "/assets/industrial4.jpg"
+  },
+  {
+    "city": "Hyderabad",
+    "title": "Industrial Plot with Good Access",
+    "type": "Industrial_Plots",
+    "rent": 4000000,
+    "dateAdded": "2025-01-28",
+    "area": "1500 sq.ft",
+    "image": "/assets/industrial5.jpg"
+  },
+  {
+    "city": "Pune",
+    "title": "Industrial Land Near City",
+    "type": "Industrial_Plots",
+    "rent": 3900000,
+    "dateAdded": "2025-04-08",
+    "area": "1520 sq.ft",
+    "image": "/assets/industrial6.jpg"
+  },
+  {
+    "city": "Ahmedabad",
+    "title": "Affordable Industrial Plot",
+    "type": "Industrial_Plots",
+    "rent": 3600000,
+    "dateAdded": "2025-03-15",
+    "area": "1480 sq.ft",
+    "image": "/assets/industrial7.jpg"
+  },
+  {
+    "city": "Kolkata",
+    "title": "Industrial Plot near Port",
+    "type": "Industrial_Plots",
+    "rent": 3700000,
+    "dateAdded": "2025-05-01",
+    "area": "1490 sq.ft",
+    "image": "/assets/industrial8.jpg"
+  },
+  {
+    "city": "Lucknow",
+    "title": "Industrial Plot with Utilities",
+    "type": "Industrial_Plots",
+    "rent": 3550000,
+    "dateAdded": "2025-02-10",
+    "area": "1450 sq.ft",
+    "image": "/assets/industrial9.jpg"
+  },
+  {
+    "city": "Chandigarh",
+    "title": "Industrial Plot Close to Airport",
+    "type": "Industrial_Plots",
+    "rent": 4000000,
+    "dateAdded": "2025-04-18",
+    "area": "1600 sq.ft",
+    "image": "/assets/industrial10.jpg"
+  }
+]

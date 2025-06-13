@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apna Adda — Complete Detailed Project Specification</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom Colors & Fonts */
+        :root {
+            --color-ochre: #CC7722; /* A warm, earthy ochre */
+            --color-burnt-orange: #BF5700; /* Deeper orange for buttons */
+            --color-mustard-yellow: #FFD700; /* Accent yellow */
+            --color-cream: #F5F5DC; /* Soft cream background */
+            --color-dark-text: #333333;
+            --color-light-text: #FFFFFF;
+            --color-border: #D1D5DB; /* Light gray for borders */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-cream);
+            color: var(--color-dark-text);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Merriweather', serif;
+            color: var(--color-burnt-orange);
+            margin-bottom: 0.75rem;
+        }
+
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.75rem; }
+        h4 { font-size: 1.5rem; }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .section-card {
+            background-color: white;
+            border-radius: 1rem; /* Rounded corners */
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        .btn-primary {
+            background-color: var(--color-ochre);
+            color: var(--color-light-text);
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.75rem; /* Rounded corners */
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .btn-primary:hover {
+            background-color: var(--color-burnt-orange); /* Deeper shade on hover */
+            transform: translateY(-2px);
+        }
+
+        .input-field {
+            border: 1px solid var(--color-border);
+            border-radius: 0.5rem;
+            padding: 0.75rem 1rem;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05); /* Subtle inner shadow */
+            transition: border-color 0.2s ease;
+        }
+        .input-field:focus {
+            outline: none;
+            border-color: var(--color-ochre);
+            box-shadow: 0 0 0 3px rgba(204, 119, 34, 0.2);
+        }
+
+        .table-auto {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .table-auto th, .table-auto td {
+            border: 1px solid var(--color-border);
+            padding: 0.75rem;
+            text-align: left;
+        }
+        .table-auto th {
+            background-color: var(--color-ochre);
+            color: var(--color-light-text);
+            font-weight: 600;
+        }
+        .table-auto tr:nth-child(even) {
+            background-color: #F9F9F9;
+        }
+
+        .code-block {
+            background-color: #f8f8f8;
+            border: 1px solid #e0e0e0;
+            border-left: 4px solid var(--color-ochre);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            font-family: monospace;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.75rem; }
+            h3 { font-size: 1.5rem; }
+            .section-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="container">
+        <header class="text-center mb-10 py-8 bg-white rounded-xl shadow-md">
+            <img src="https://placehold.co/150x50/CC7722/FFFFFF?text=Apna+Adda" alt="Apna Adda Logo" class="mx-auto mb-4 rounded-lg">
+            <h1 class="text-5xl font-extrabold text-burnt-orange leading-tight">Apna Adda</h1>
+            <p class="text-xl text-gray-600 mt-2">Your Place, Your People</p>
+        </header>
+
+        <section class="section-card">
+            <h2 class="text-3xl font-bold mb-6">Complete Detailed Project Specification</h2>
+
+            <div class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-ochre">1. User Authentication & Profile</h3>
+                <h4 class="text-xl font-medium mb-2">Features:</h4>
+                <ul class="list-disc list-inside ml-4 mb-4">
+                    <li>**User Registration:**
+                        <ul class="list-circle list-inside ml-4">
+                            <li>Fields: Full Name, Email, Password (with confirmation)</li>
+                            <li>Validations: Email format, password strength</li>
+                            <li>Passwords hashed (bcrypt or similar)</li>
+                        </ul>
+                    </li>
+                    <li>**User Login:** Email + Password verification, Use session (express-session) or JWT tokens</li>
+                    <li>**Logout**</li>
+                    <li>**Profile Management:** View & update profile (Name, Email), Change password with old password verification</li>
+                    <li>**Security:** Prevent duplicate emails, Password hashing and salting, Input sanitization to prevent injection attacks</li>
+                </ul>
+                <h4 class="text-xl font-medium mb-2">UI:</h4>
+                <ul class="list-disc list-inside ml-4">
+                    <li>Registration page with clear form and validation feedback</li>
+                    <li>Login page with “forgot password” link (optional)</li>
+                    <li>Profile page showing user info and editable fields</li>
+                    <li>Secure routes: dashboard and listing management only accessible after login</li>
+                </ul>
+            </div>
+
+            <div class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-ochre">2. Property Listings</h3>
+                <h4 class="text-xl font-medium mb-2">Features:</h4>
+                <ul class="list-disc list-inside ml-4 mb-4">
+                    <li>**Create Listing:**
+                        <ul class="list-circle list-inside ml-4">
+                            <li>Title (string, required)</li>
+                            <li>City (string, required)</li>
+                            <li>Rent (number, required)</li>
+                            <li>Property Type (dropdown: Apartment, House, PG, Shared Room, Studio)</li>
+                            <li>Photos: multiple image URLs input (comma separated or multiple fields)</li>
+                            <li>Description (optional)</li>
+                        </ul>
+                    </li>
+                    <li>**Edit Listing:** Only owner can edit</li>
+                    <li>**Delete Listing:** Only owner can delete</li>
+                    <li>**View Listings:** List all listings with summary info (title, city, rent, type), Click listing to view full details</li>
+                    <li>**Upload/Store photos:** Initially URLs for simplicity, later can add actual image upload using multer and local/cloud storage</li>
+                </ul>
+                <h4 class="text-xl font-medium mb-2">UI:</h4>
+                <ul class="list-disc list-inside ml-4">
+                    <li>Form for adding/editing listings with validations</li>
+                    <li>Listings displayed in card/grid layout with photos thumbnails</li>
+                    <li>Property details page showing larger images gallery and full info</li>
+                </ul>
+            </div>
+
+            <div class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-ochre">3. Search & Filters</h3>
+                <h4 class="text-xl font-medium mb-2">Features:</h4>
+                <ul class="list-disc list-inside ml-4 mb-4">
+                    <li>Search bar filtering listings by city or keywords in title</li>
+                    <li>**Filters by:** Rent range (min/max), Property type</li>
+                    <li>**Sort listings by:** Rent ascending/descending, Date added (newest first)</li>
+                    <li>Pagination or infinite scroll for large results (optional)</li>
+                </ul>
+                <h4 class="text-xl font-medium mb-2">UI:</h4>
+                <ul class="list-disc list-inside ml-4">
+                    <li>Search bar at top of home or listings page</li>
+                    <li>Sidebar or dropdown filters</li>
+                    <li>Results dynamically update as filters change (using jQuery AJAX)</li>
+                </ul>
+            </div>
+
+            <div class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-ochre">4. User Dashboard</h3>
+                <h4 class="text-xl font-medium mb-2">Features:</h4>
+                <ul class="list-disc list-inside ml-4 mb-4">
+                    <li>After login, user can access dashboard</li>
+                    <li>**Dashboard shows:**
+                        <ul class="list-circle list-inside ml-4">
+                            <li>All user’s listings with quick summary (title, city, rent)</li>
+                            <li>Buttons to edit or delete each listing</li>
+                            <li>Button to add new listing</li>
+                            <li>Show messages or notifications (optional)</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h4 class="text-xl font-medium mb-2">UI:</h4>
+                <ul class="list-disc list-inside ml-4">
+                    <li>Clean, organized dashboard with listing cards or table</li>
+                    <li>Confirmation dialogs on delete</li>
+                    <li>Status messages for add/edit/delete actions</li>
+                </ul>
+            </div>
+
+            <div class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-ochre">5. Home / Landing Page</h3>
+                <h4 class="text-xl font-medium mb-2">Features:</h4>
+                <ul class="list-disc list-inside ml-4 mb-4">
+                    <li>Welcome message with catchy tagline</li>
+                    <li>Search bar for quick property search</li>
+                    <li>Preview of latest or featured listings (e.g., 5 most recent)</li>
+                    <li>Brief about Apna Adda platform & its vision</li>
+                </ul>
+                <h4 class="text-xl font-medium mb-2">UI:</h4>
+                <ul class="list-disc list-inside ml-4">
+                    <li>Warm colors, Indian-inspired typography</li>
+                    <li>Simple, inviting layout</li>
+                    <li>Responsive design for mobile and desktop</li>
+                </ul>
+                <div class="flex flex-wrap gap-4 mt-6">
+                    <img src="https://placehold.co/200x150/FFD700/333333?text=Featured+1" alt="Featured Listing 1" class="w-full sm:w-1/2 md:w-1/3 lg:w-1/5 rounded-lg shadow-md">
+                    <img src="https://placehold.co/200x150/CC7722/FFFFFF?text=Featured+2" alt="Featured Listing 2" class="w-full sm:w-1/2 md:w-1/3 lg:w-1/5 rounded-lg shadow-md">
+                    <img src="https://placehold.co/200x150/BF5700/FFFFFF?text=Featured+3" alt="Featured Listing 3" class="w-full sm:w-1/2 md:w-1/3 lg:w-1/5 rounded-lg shadow-md">
+                </div>
+            </div>
+
+            <div class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-ochre">6. Listing Details Page</h3>
+                <h4 class="text-xl font-medium mb-2">Features:</h4>
+                <ul class="list-disc list-inside ml-4 mb-4">
+                    <li>**Show all details of a property:** Title, City, Rent, Property Type, Description, Photo gallery/carousel</li>
+                    <li>**Optionally:** Contact details of the lister, Button to send inquiry (email or form)</li>
+                </ul>
+                <h4 class="text-xl font-medium mb-2">UI:</h4>
+                <ul class="list-disc list-inside ml-4">
+                    <li>Large header with title</li>
+                    <li>Photo gallery with thumbnails or slideshow (using jQuery plugin or custom)</li>
+                    <li>Clean layout with labeled info fields</li>
+                </ul>
+                <div class="flex flex-wrap gap-4 mt-6">
+                    <img src="https://placehold.co/300x200/CC7722/FFFFFF?text=Property+Photo+1" alt="Property Photo 1" class="w-full md:w-1/2 lg:w-1/3 rounded-lg shadow-md">
+                    <img src="https://placehold.co/300x200/FFD700/333333?text=Property+Photo+2" alt="Property Photo 2" class="w-full md:w-1/2 lg:w-1/3 rounded-lg shadow-md">
+                </div>
+            </div>
+
+            <div class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-ochre">7. Notifications & Messaging (Optional for MVP)</h3>
+                <h4 class="text-xl font-medium mb-2">Features:</h4>
+                <ul class="list-disc list-inside ml-4">
+                    <li>Users receive notifications for inquiries or interest shown in listings</li>
+                    <li>Simple contact form on listing detail to send message to owner</li>
+                    <li>Inbox view in dashboard to manage messages</li>
+                </ul>
+            </div>
+
+            <div class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-ochre">8. Backend & API</h3>
+                <h4 class="text-xl font-medium mb-2">Tech Stack:</h4>
+                <ul class="list-disc list-inside ml-4 mb-4">
+                    <li>Node.js + Express.js</li>
+                    <li>MongoDB for data storage</li>
+                </ul>
+                <h4 class="text-xl font-medium mb-2">API Endpoints:</h4>
+                <div class="overflow-x-auto rounded-lg shadow-md">
+                    <table class="table-auto min-w-full">
+                        <thead>
+                            <tr>
+                                <th>Endpoint</th>
+                                <th>Method</th>
+                                <th>Description</th>
+                                <th>Auth Required</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>`/api/register`</td><td>POST</td><td>Register new user</td><td>No</td></tr>
+                            <tr><td>`/api/login`</td><td>POST</td><td>Login user</td><td>No</td></tr>
+                            <tr><td>`/api/logout`</td><td>POST</td><td>Logout user</td><td>Yes</td></tr>
+                            <tr><td>`/api/profile`</td><td>GET</td><td>Get current user profile</td><td>Yes</td></tr>
+                            <tr><td>`/api/profile`</td><td>PUT</td><td>Update user profile</td><td>Yes</td></tr>
+                            <tr><td>`/api/listings`</td><td>GET</td><td>Get all listings (with filters & search)</td><td>No</td></tr>
+                            <tr><td>`/api/listings`</td><td>POST</td><td>Add new listing</td><td>Yes</td></tr>
+                            <tr><td>`/api/listings/:id`</td><td>GET</td><td>Get listing details</td><td>No</td></tr>
+                            <tr><td>`/api/listings/:id`</td><td>PUT</td><td>Update listing by owner</td><td>Yes</td></tr>
+                            <tr><td>`/api/listings/:id`</td><td>DELETE</td><td>Delete listing by owner</td><td>Yes</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-ochre">9. MongoDB Schemas</h3>
+                <h4 class="text-xl font-medium mb-2">User Schema</h4>
+                <pre class="code-block"><code>const UserSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  email: { type: String, required: true, unique: true },
+  passwordHash: { type: String, required: true },
+  createdAt: { type: Date, default: Date.now }
+});</code></pre>
+                <h4 class="text-xl font-medium mb-2">Listing Schema</h4>
+                <pre class="code-block"><code>const ListingSchema = new mongoose.Schema({
+  ownerId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
+  title: { type: String, required: true },
+  city: { type: String, required: true },
+  rent: { type: Number, required: true },
+  propertyType: { type: String, required: true },
+  photos: [String], // Array of image URLs
+  description: { type: String },
+  createdAt: { type: Date, default: Date.now }
+});</code></pre>
+            </div>
+
+            <div class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-ochre">10. Frontend Structure</h3>
+                <pre class="code-block"><code>/public
+  /css
+    style.css          # Warm, desi inspired styling
+  /js
+    main.js            # jQuery and AJAX logic for auth, listings, search
+  /images              # Static images, logos, icons
+  index.html           # Landing page
+  login.html           # Login page
+  register.html        # Registration page
+  dashboard.html       # User dashboard for managing listings
+  addListing.html      # Form to add/edit listings
+  listing.html         # Property details page</code></pre>
+            </div>
+
+            <div class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-ochre">11. UI/UX Design Details</h3>
+                <ul class="list-disc list-inside ml-4">
+                    <li>**Colors:** Earthy warm colors — ochre, burnt orange, mustard yellow, cream backgrounds.</li>
+                    <li>**Fonts:** Combination of modern sans serif for body and elegant serif (like ‘Georgia’ or ‘Merriweather’) for headings.</li>
+                    <li>**Buttons:** Rounded corners, hover effects with deeper shades of orange.</li>
+                    <li>**Forms:** Clean inputs with subtle shadows, error highlighting in red, success messages in green.</li>
+                    <li>**Responsive:** Layout adjusts gracefully for mobile screens; hamburger menu on small devices.</li>
+                    <li>**Animations:** Subtle fade-ins for listings, hover scale on cards.</li>
+                </ul>
+            </div>
+
+            <div class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-ochre">12. Security Considerations</h3>
+                <ul class="list-disc list-inside ml-4">
+                    <li>Hash passwords securely (bcrypt)</li>
+                    <li>Sanitize inputs to avoid XSS/Injection attacks</li>
+                    <li>Protect routes with middleware for authentication</li>
+                    <li>Limit rate of requests to avoid brute force attacks on login</li>
+                    <li>HTTPS for secure data transfer (optional on deployment)</li>
+                </ul>
+            </div>
+
+            <div class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-ochre">13. Development Roadmap (Phases)</h3>
+                <h4 class="text-xl font-medium mb-2">Phase 1: Core MVP</h4>
+                <ul class="list-disc list-inside ml-4 mb-4">
+                    <li>User Registration & Login</li>
+                    <li>Add/View Listings</li>
+                    <li>Listing details page</li>
+                    <li>Search & Filter functionality</li>
+                    <li>User dashboard for managing own listings</li>
+                    <li>Responsive UI with warm, desi aesthetics</li>
+                </ul>
+                <h4 class="text-xl font-medium mb-2">Phase 2: Enhancements</h4>
+                <ul class="list-disc list-inside ml-4 mb-4">
+                    <li>Messaging system & notifications</li>
+                    <li>Image upload (with Multer + cloud storage)</li>
+                    <li>Favorites/Wishlist feature</li>
+                    <li>Map integration with location display</li>
+                    <li>Admin moderation panel</li>
+                </ul>
+                <h4 class="text-xl font-medium mb-2">Phase 3: Extras</h4>
+                <ul class="list-disc list-inside ml-4">
+                    <li>Reviews & ratings</li>
+                    <li>Booking calendar & requests</li>
+                    <li>Analytics dashboard</li>
+                    <li>Mobile app version (React Native or Flutter)</li>
+                </ul>
+            </div>
+
+            <div class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-ochre">14. Optional Bonus Features</h3>
+                <ul class="list-disc list-inside ml-4">
+                    <li>Email verification on registration</li>
+                    <li>Password reset via email</li>
+                    <li>Social logins (Google, Facebook)</li>
+                    <li>Progressive Web App (PWA) support for offline access</li>
+                    <li>SEO friendly URLs for listings</li>
+                    <li>Dark mode toggle for UI</li>
+                </ul>
+            </div>
+        </section>
+
+        <footer class="text-center py-6 text-gray-500 text-sm">
+            &copy; 2025 Apna Adda. All rights reserved.
+        </footer>
+    </div>
+</body>
+</html>

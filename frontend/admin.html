@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Dashboard - Rent Finders</title>
+  <link rel="stylesheet" href="Admin.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+</head>
+<body>
+  <div class="admin-wrapper">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2>Rent Finders Admin</h2>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#" class="nav-link active">
+          <i class="fas fa-tachometer-alt"></i> Dashboard
+        </a>
+        <a href="../frontend/listings.html" class="nav-link">
+          <i class="fas fa-home"></i> Listings
+        </a>
+        <a href="#" class="nav-link">
+          <i class="fas fa-users"></i> Users
+        </a>
+        <a href="#" class="nav-link">
+          <i class="fas fa-cog"></i> Settings
+        </a>
+        <a href="./Homepage.html" class="nav-link logout">
+          <i class="fas fa-sign-out-alt"></i> Logout
+        </a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header class="main-header">
+        <h1>Welcome, Admin!</h1>
+        <button class="btn-primary">Add New Listing</button>
+      </header>
+
+      <section class="stats-cards">
+        <div class="card">
+          <h3>Total Listings</h3>
+          <p>125</p>
+        </div>
+        <div class="card">
+          <h3>Active Users</h3>
+          <p>430</p>
+        </div>
+        <div class="card">
+          <h3>New Requests</h3>
+          <p>8</p>
+        </div>
+      </section>
+
+      <!-- Add New Listing Form -->
+      <section class="add-listing-form" style="margin-top: 30px;">
+        <h2>Add New Listing</h2>
+        <form id="listingForm">
+          <input type="text" name="city" placeholder="City" required />
+          <input type="text" name="title" placeholder="Property Title" required />
+          <input type="text" name="type" placeholder="Type (e.g., Industrial_Plots)" required />
+          <input type="number" name="rent" placeholder="Rent (in ₹)" required />
+          <input type="text" name="area" placeholder="Area (e.g., 1450 sq.ft)" required />
+          <input type="text" name="image" placeholder="Image Path (e.g., /assets/industrial9.jpg)" required />
+          
+          <select name="category" required>
+            <option value="">Select Category</option>
+            <option value="freehold">Freehold</option>
+            <option value="flats">Flats</option>
+            <option value="industrial">Industrial</option>
+            <option value="authority">Authority</option>
+            <option value="commercial">Commercial</option>
+          </select>
+          
+          <button type="submit">Add Listing</button>
+        </form>
+      </section>
+
+      <section class="recent-activity">
+        <h2>Recent Activity</h2>
+        <ul>
+          <li>New listing added: 2BHK in Koramangala</li>
+          <li>User registered: Rohan</li>
+          <li>Rental agreement updated for Sector 62 property</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <!-- Filter & Search -->
+<section class="filter-bar">
+  <input type="text" placeholder="Search by Title..." />
+  <select>
+    <option value="">Filter by Type</option>
+    <option value="flats">Flats</option>
+    <option value="industrial">Industrial</option>
+  </select>
+</section>
+
+<!-- All Listings Table -->
+<section class="listings-table">
+  <h2>All Listings</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th><th>Type</th><th>City</th><th>Price</th><th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2BHK in Pune</td><td>Flats</td><td>Pune</td><td>₹20,000</td>
+        <td><button>Edit</button><button>Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+
+  <!-- JavaScript at the bottom to ensure DOM loads first -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('listingForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const form = e.target;
+        const data = {
+          city: form.city.value,
+          title: form.title.value,
+          type: form.type.value,
+          rent: parseInt(form.rent.value),
+          area: form.area.value,
+          image: form.image.value,
+          category: form.category.value
+        };
+
+        const res = await fetch('/add-listing', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+
+        const result = await res.json();
+        alert(result.message);
+        form.reset();
+      });
+    });
+  </script>
+</body>
+</html>

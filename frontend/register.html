@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register Page</title>
+  <script src="../databases/db.js"></script>
+  <style>
+    body, html {
+  margin: 0;
+  padding: 0;
+  background-color: #98c79c;
+  font-family: "Segoe UI", sans-serif;
+  height: 100%;
+}
+
+.outer-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background-color: #fdfaf4;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  padding: 2rem;
+  width: 950px;
+  max-width: 95%;
+}
+
+.form-section {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  width: 370px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-section h2 {
+  font-size: 24px;
+  margin-bottom: 0.5rem;
+}
+
+.form-section p {
+  font-size: 14px;
+  color: #444;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.forgot {
+  font-size: 12px;
+  margin-bottom: 1rem;
+}
+
+.forgot a {
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+}
+
+.sign-in-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #aed6b3;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 1.2rem;
+}
+
+.or {
+  font-size: 13px;
+  color: #666;
+  margin: 1rem 0;
+}
+
+.socials {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  flex-wrap: nowrap;
+}
+
+.socials .social {
+  flex: 1;
+  min-width: 0;
+  padding: 0.6rem;
+  border: 1px solid #000;
+  border-radius: 8px;
+  background-color: white;
+  font-size: 13px;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.bottom-text {
+  font-size: 13px;
+  color: #444;
+}
+
+.bottom-text a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+}
+
+.image-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-section img {
+  max-width: 90%;
+  height: auto;
+}
+
+  </style>
+</head>
+<body>
+  <div class="outer-wrapper">
+    <div class="card">
+
+      <!-- Left: Registration Form -->
+     <div class="form-section">
+  <h2>Register</h2>
+  <p>Hey, Enter your details to create<br />your account</p>
+
+  <form action="/register" method="post">
+    <input type="text" placeholder="Username" name="username" required />
+    <input type="text" placeholder="Email / Phone No" name="email" required />
+    <input type="password" placeholder="Create Passcode" name="password" required />
+
+    <small class="forgot">Already have an account? <a href="./login.html">Sign in!</a></small>
+
+    <button type="submit" class="sign-in-btn">Register</button>
+
+    <div class="or">— Or Sign up with —</div>
+
+    <div class="socials">
+      <button type="button" class="social">Google</button>
+      <button type="button" class="social">Apple ID</button>
+      <button type="button" class="social">Facebook</button>
+    </div>
+  </form>
+
+  <p class="bottom-text">Already have an account? <a href="login.html">Sign in</a></p>
+</div>
+
+      <!-- Right: Illustration -->
+      <div class="image-section">
+        <img src="./image.png" alt="Illustration" />
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

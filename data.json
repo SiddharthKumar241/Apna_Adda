@@ -1,0 +1,101 @@
+[
+  {
+    "city": "Bangalore",
+    "title": "2BHK in Koramangala",
+    "type": "2BHK",
+    "rent": 15000,
+    "dateAdded": "2024-05-20",
+    "area": "Koramangala",
+    "image":"assets/2bhk.jpg"
+  },
+  {
+    "city": "Mumbai",
+    "title": "Studio in Andheri",
+    "type": "Studio",
+    "rent": 18000,
+    "dateAdded": "2024-05-10",
+    "area": "Andheri",
+    "image": "assets/studio.jpeg"
+  },
+  {
+    "city": "Delhi",
+    "title": "PG near DU",
+    "type": "PG",
+    "rent": 10000,
+    "dateAdded": "2024-05-15",
+    "area":"North Campus",
+    "image": "assets/pg_2.jpeg"
+  },
+  {
+    "city": "Chennai",
+    "title": "1BHK in T Nagar",
+    "type": "1BHK",
+    "rent": 12000,
+    "dateAdded": "2024-05-18",
+    "area": "T Nagar",
+    "image": "assets/1bhk_2.jpeg"
+  },
+  {
+    "city": "Kolkata",
+    "title": "Flat in Salt Lake",
+    "type": "Flat",
+    "rent": 14000,
+    "dateAdded": "2024-05-22",
+    "area": "Salt Lake",
+    "image": "assets/flats_2.jpeg"
+  },
+  {
+    "city": "Hyderabad",
+    "title": "2BHK in Banjara Hills",
+    "type": "2BHK",
+    "rent": 16000,
+    "dateAdded": "2024-05-25",
+    "area": "Banjara Hills",
+    "image": "assets/2bhk_2.jpg"
+  },
+  {
+    "city": "Pune",
+    "title": "Flat in Kothrud",
+    "type": "Flat",
+    "rent": 13000,
+    "dateAdded": "2024-05-30",
+    "area": "Kothrud",
+    "image": "assets/flats_1.jpeg"
+  },
+  {
+    "city": "Ahmedabad",
+    "title": "PG in Navrangpura",
+    "type": "PG",
+    "rent": 9000,
+    "dateAdded": "2024-05-28",
+    "area": "Navrangpura",
+    "image": "assets/pg_1.jpeg"
+  },
+  {
+    "city": "Jaipur",
+    "title": "1BHK in C Scheme",
+    "type": "1BHK",
+    "rent": 11000,
+    "dateAdded": "2024-05-21",
+    "area": "C Scheme",
+    "image": "assets/1bhk_1.jpg"
+  },
+  {
+    "city": "Chandigarh",
+    "title": "2BHK in Sector 17",
+    "type": "2BHK",
+    "rent": 17000,
+    "dateAdded": "2024-05-23",
+    "area": "Sector 17",
+    "image": "assets/2bhk_1.jpg"
+  },
+  {
+    "city": "Lucknow",
+    "title": "Flat in Gomti Nagar",
+    "type": "Flat",
+    "rent": 12000,
+    "dateAdded": "2024-05-26",
+    "area": "Gomti Nagar",
+    "image": "assets/flats.webp"
+  }
+]
