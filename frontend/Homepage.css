@@ -77,8 +77,8 @@ hero{
 }
 .hero-text
 {
-    margin: 10px;
-    padding: 10px;
+    margin: px;
+    padding: 0px;
     padding-left:20px;
 }
 hero .hero-text h1 span{
@@ -89,8 +89,8 @@ hero .hero-text h1 span{
 hero .hero-image img {
     margin-right:25px;
     padding:5px;
-    width: 620px;
-    height: 600px;
+    width: 580px;
+    height: 580px;
     border-radius: 15px;
     padding-right:10px;
 }
@@ -460,6 +460,166 @@ hero .hero-image img {
     gap: 15px;
   }
 }
+@media (max-width: 768px) {
+  /* HEADER AND NAV FIX */
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 10px;
+    background-color: #f0f0f0;
+    gap: 10px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  nav a {
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 8px;
+    font-size: 1rem;
+  }
+
+  #logout,
+  #finalize,
+  #join,
+  #any {
+    width: 90%;
+    max-width: 300px;
+    margin: 8px auto;
+  }
+
+  #welcome-text {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  /* HERO SECTION FIX */
+  hero {
+    flex-direction: column;
+    padding: 20px 10px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-text {
+    margin: 10px 0;
+    padding: 0 10px;
+  }
+
+ .hero-text h1 span {
+  display: block;              
+  font-size: clamp(2rem, 6vw, 3.5rem);  /* Responsive scaling */
+  line-height: 1;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #111;
+  margin-bottom: 5px;
+}
+
+  .hero-text p {
+    font-size: 1rem;
+    margin-top: 12px;
+  }
+
+ .hero-image img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;              /* ← Automatically adjusts height based on width */
+  aspect-ratio: 1 / 1;       /* ← Keeps the image square-shaped (1:1 ratio) */
+  margin-top: 20px;
+  border-radius: 15px;
+  object-fit: cover;         /* Ensures image fills the container nicely */
+}
+
+  /* GRID SECTIONS (cards, areas, testimonials) */
+  .testimonial-grid,
+  .steps,
+  .area-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .testimonial-card,
+  .step-card,
+  .area-card {
+    width: 90%;
+  }
+}
+
+  #home-search-form {
+    width: 100%;
+  }
+
+  .search-input {
+    width: 90%;
+  }
+
+  .search-button {
+    width: 90%;
+  }
+
+  #faq-section {
+    padding: 20px 10px;
+  }
+
+  #cta-footer {
+    padding: 30px 15px;
+  }
+
+  #search-bar {
+    flex-direction: column;
+    max-width: 90%;
+  }
+
+  #search-bar input[type="text"], 
+  #search-bar button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .social-icons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  #select {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .select1 img {
+    width: 90%;
+  }
+
+  .container h2,
+  .container p,
+  .hero-text p,
+  .area-card p {
+    font-size: 1em;
+  }
+
+  #welcome-text {
+    font-size: 1rem;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  #logout, #finalize, #join, .hero-text #learn-more, .hero-text #vedio {
+    width: 90%;
+    margin: 5px 0;
+  }
 body,*,html,a,buttons{
   cursor: url("../assets/icons8-cursor-32.png"), auto;
 }
