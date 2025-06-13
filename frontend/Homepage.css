@@ -460,28 +460,30 @@ hero .hero-image img {
     gap: 15px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   /* HEADER AND NAV FIX */
   header {
     flex-direction: column;
     align-items: center;
-    padding: 15px 10px;
+    padding: 0px 10px;
     background-color: #f0f0f0;
     gap: 10px;
+    
   }
 
   nav {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    padding-top: 70px;
   }
 
   nav a {
     display: block;
     text-align: center;
     width: 100%;
-    padding: 8px;
+    padding: 6px;
     font-size: 1rem;
+
   }
 
   #logout,
@@ -501,9 +503,10 @@ hero .hero-image img {
   /* HERO SECTION FIX */
   hero {
     flex-direction: column;
-    padding: 20px 10px;
+    padding: 0px 10px;
     align-items: center;
     text-align: center;
+    padding-bottom: 20px;
   }
 
   .hero-text {
@@ -550,7 +553,6 @@ hero .hero-image img {
   .area-card {
     width: 90%;
   }
-}
 
   #home-search-form {
     width: 100%;
@@ -620,6 +622,7 @@ hero .hero-image img {
     width: 90%;
     margin: 5px 0;
   }
+}
 body,*,html,a,buttons{
   cursor: url("../assets/icons8-cursor-32.png"), auto;
 }
